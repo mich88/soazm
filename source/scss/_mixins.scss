@@ -1,0 +1,51 @@
+// BREAKPOINTS
+$breakpoints: (
+  	small: 480px,
+	medium: 768px,
+	large: 1024px,
+	x-large: 1200px
+);
+
+@mixin bp($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media only screen and (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+// FONTS
+@mixin font-l($s, $w, $c) {
+
+	font: {
+		family: 'Lato', sans-serif;
+		size: ($s / ($s * 0 + 1)) * 1px;
+		weight: $w;
+	}
+	@if type-of($c)=='number' or type-of($c)=='string' {
+    	color: unquote('#' + $c);
+    }
+    @else {
+    	color: $c;
+    }
+}
+
+// CLEARFIX
+@mixin cf {
+
+	*zoom: 1;
+
+	&:before, &:after {
+  		content: " ";
+  		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
