@@ -1,0 +1,30 @@
+// teaser
+.teaser {
+	position: relative;
+
+	&::before {
+		content: " ";
+		display: block;
+		margin: 60px auto;
+		width: 150px;
+		height: 2px;
+		background-color: color(primary);
+	}
+
+	&:first-of-type::before {
+		content: none;
+	}
+
+	&__heading {
+		margin-bottom: 5px;
+	}
+
+	&__txt {
+
+		&_sm {
+			display: block;
+			margin-bottom: 20px;
+			color: rgba(214,125,0,.5);
+		}
+	}
+}
