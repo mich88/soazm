@@ -49,3 +49,8 @@ $breakpoints: (
 		clear: both;
 	}
 }
+
+
+@function color($key: "primary") {
+	@return map-get($colors, $key);
+}
