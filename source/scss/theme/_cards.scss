@@ -1,0 +1,24 @@
+// cards
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+
+	&__card {
+		flex: 0 0 18%;
+
+		margin-right: 2.5%;
+		margin-bottom: 2.5%;
+
+		&::before {
+			content: none;
+		}
+
+		&:nth-child(5n+5) {
+			margin-right: 0;
+		}
+	}
+
+	&__img {
+		width: 100%;
+	}
+}
