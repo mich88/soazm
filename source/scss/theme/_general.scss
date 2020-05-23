@@ -1,0 +1,116 @@
+// general
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: Roboto;
+	font-size: 18px;
+	font-weight: 400;
+	color: color(black);
+}
+
+a, .link {
+	position: relative;
+	color: color(primary);
+	text-decoration: none;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 100%; left: 0;
+		display: block;
+		width: 0%;
+		height: 2px;
+		background-color: color(primary);
+
+		transition: width .3s;
+	}
+
+	&:hover {
+
+		&::before {
+			width: 100%;
+		}
+	}
+}
+
+p {
+	margin-bottom: 20px;
+	line-height: 1.2;
+}
+
+// section
+section	{
+	margin: 0 auto;
+	padding: 40px 20px;
+	max-width: 774px;
+}
+
+// heading
+.heading {
+
+	&_main {
+		flex: 1 1 1%;
+
+		margin: 0;
+		font-size: 38px;
+		font-weight: 400;
+		line-height: 1.5;
+		text-align: center;
+		color: color(white);
+		overflow: hidden;
+	}
+
+	&__part {
+		position: relative;
+		z-index: 1;
+		display: inline-block;
+		padding: 5px 20px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			display: block;
+		}
+
+		&_top {
+
+			&::before {
+				top: 0; bottom: 0; right: 0; left: -9999px;
+				background-color: color(primary);
+			}
+		}
+
+		&_bottom {
+
+			&::before {
+				top: 0; right: -9999px; bottom: 0; left: 0;
+				background-color: color(black);
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				z-index: -1;
+				top: 0; right: -9999px; bottom: 50%; left: 0;
+				display: block;
+				background-color: color(secondary);
+			}
+		}
+	}
+
+	&_h2 {
+		margin-bottom: 40px;
+		font-family: Anton;
+		font-size: 54px;
+		color: color(primary);
+	}
+
+	&_h3 {
+		font-family: Anton;
+		font-size: 32px;
+		color: color(primary);
+	}
+}
