@@ -1,0 +1,14 @@
+// list
+.list {
+
+	&__item {
+		padding: 10px 20px;
+	}
+
+	&__link {
+		font-family: Anton;
+		font-size: 42px;
+		text-transform: uppercase;
+		color: color(white);
+	}
+}
