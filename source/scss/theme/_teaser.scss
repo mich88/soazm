@@ -8,7 +8,7 @@
 		margin: 60px auto;
 		width: 150px;
 		height: 2px;
-		background-color: color(primary);
+		background-color: color(secondary);
 	}
 
 	&:first-of-type::before {
@@ -17,6 +17,7 @@
 
 	&__heading {
 		margin-bottom: 5px;
+		padding-left: 0;
 	}
 
 	&__txt {
@@ -24,7 +25,8 @@
 		&_sm {
 			display: block;
 			margin-bottom: 20px;
-			color: rgba(214,125,0,.5);
+			color: rgba(140, 72, 48, .8);
+
 		}
 	}
 }
