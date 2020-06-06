@@ -1,21 +1,25 @@
 // header
 .pg-header {
-    display: flex;
-	align-items: center;
-
 	position: absolute;
 	right: 0;left: 0;
+	height: 179px;
+	padding-left: 300px;
 
-	padding-left: 250px;
-	// padding: 10px 10px 10px 260px;
-    // background: color(primary);
+	&::after {
+		content: " ";
+		position: absolute;
+		right: 0;
+		bottom: -25px;
+		display: block;
+		width: 52vw;
+		height: 25px;
+		background: linear-gradient(-25deg, color(primary) 10%, color(tertiary) 50%);
+	}
 }
 
 .logo {
-	flex: 0 0 240px;
-
 	display: inline-block;
-	padding: 8px;
+	padding: 28px 38px 38px;
 	background-color: color(white);
 
 	img {
