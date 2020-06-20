@@ -4,21 +4,53 @@
 	flex-wrap: wrap;
 
 	&__card {
-		flex: 0 0 18%;
+		flex: 1 1 30%;
 
-		margin-right: 2.5%;
-		margin-bottom: 2.5%;
+		margin-right: 5%;
+		margin-bottom: 50px;
+		text-align: center;
 
-		&::before {
-			content: none;
-		}
-
-		&:nth-child(5n+5) {
+		&:nth-child(3n+3) {
 			margin-right: 0;
 		}
 	}
 
 	&__img {
+		margin-bottom: 10px;
 		width: 100%;
+	}
+
+	&__heading {
+		margin-bottom: 10px;
+		font-size: 28px;
+
+		&_sub {
+			@extend .cards__heading;
+			margin-bottom: 20px;
+			font-size: 24px;
+		}
+	}
+
+
+	&_gallery {
+		@extend .cards;
+
+		.cards {
+
+			&__card {
+				flex: 0 0 18%;
+
+				margin-right: 2.5%;
+				margin-bottom: 2.5%;
+
+				&::before {
+					content: none;
+				}
+
+				&:nth-child(5n+5) {
+					margin-right: 0;
+				}
+			}
+		}
 	}
 }
