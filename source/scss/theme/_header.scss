@@ -2,8 +2,8 @@
 .pg-header {
 	position: absolute;
 	right: 0;left: 0;
-	height: 179px;
-	padding-left: 300px;
+	height: 219px;
+	padding-left: 260px;
 
 	&::after {
 		content: " ";
@@ -19,7 +19,7 @@
 
 .logo {
 	display: inline-block;
-	padding: 28px 38px 38px;
+	padding: 15px 37px;
 	background-color: color(white);
 
 	img {
